@@ -4,8 +4,9 @@ A React website that uses an API to fetch stories from any public Instagram acco
 
 ## Website
 
-[storiesviewer.vercel.app](https://storiesviewer.vercel.app)
+[https://instagram-story-grabber.vercel.app/](https://instagram-story-grabber.vercel.app/)
 
 ## Screenshot
 
-![image](https://github.com/user-attachments/assets/5b54aec3-f1ad-4383-a2ab-e78d086805a1)
+![image](https://github.com/user-attachments/assets/76b5f787-3b83-4597-b5a1-bb4a8f5ca266)
+
