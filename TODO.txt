@@ -1,3 +1,2 @@
 - Add loading animation while fetching data
 - Write README
-- Improve GUI

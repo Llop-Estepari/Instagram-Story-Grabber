@@ -83,7 +83,7 @@ export function App () {
     <main>
       <header>
         <h1>Stories Viewer</h1>
-        <h2>Watch the stories of any Instagram user anonymously</h2>
+        <h2>Watch the stories of any Instagram user <span className='anonymously'>anonymously</span></h2>
       </header>
       <nav className='navigation-menu'>
         <section className='search-user'>

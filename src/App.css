@@ -192,6 +192,8 @@ button {
 .post-container {
   display: flex;
   justify-content: center;
+  border: 2px solid var(--accent);
+  background-color: var(--secondary-color);
   border-radius: 10px;
   overflow: hidden;
   article {
@@ -202,4 +204,9 @@ button {
 
 .hidden {
   display: none;
+}
+
+.anonymously {
+  background-color: var(--primary-color);
+  padding: 8px;
 }
