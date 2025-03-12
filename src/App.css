@@ -1,32 +1,36 @@
+:root {
+  --primary-color: #415de6;
+  --secondary-color: #333c69;
+  --accent: #5b6ab8;
+  --bg: #07080b;
+  --text: #edeef3;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui;
-  color: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
 }
 
 body {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  background-color: var(--bg);
+  margin: 10px;
 }
 
-.gradient-background {
-  background: linear-gradient(300deg,#405DE6,#5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040,#F77737);
-  background-size: 1000% 1000%;
-  animation: gradient-animation 8s ease infinite;
-}
-
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+header {
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  font-size: 2rem;
+  h2 {
+    font-weight: 300;
   }
 }
 
@@ -35,8 +39,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  margin: 10px;
+  gap: 40px;
+  margin: 0 10px 0 10px;
 }
 
 button {
@@ -46,25 +50,46 @@ button {
 }
 
 .navigation-menu {
+  z-index: 100;
   position: fixed;
-  top: 0;
-  width: 90vw;
-  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10px;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  /* background: linear-gradient(200deg, var(--bg), var(--secondary-color)); */
+  border-radius: 50px;
+
+  font-size: 2rem;
+
+  a {
+    text-decoration: none;
+    min-width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+  }
+  a:hover {
+    font-size: 2.3rem;
+  }
 }
 
 .search-user {
   display: flex;
-  justify-content: center;
+  margin: 0 10px 0 10px;
 }
 
 .search-user {
   div {
     display: flex;
-    align-items: center;
-    background-color: #363636;
-    border-radius: 15px;
+    background-color: var(--bg);
+    border: 1px solid var(--accent);
+    border-radius: 25px;
     width: 100%;
     max-width: 300px;
+    overflow: hidden;
   }
   input {
     padding: 10px 15px 10px 15px;
@@ -80,27 +105,25 @@ button {
 
   button {
     border: none;
-    background-color: transparent;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    background-color: var(--accent);
     font-size: 1.2rem;
     min-width: 40px;
     height: 100%;
     transition: all 0.1s ease;
   }
   button:hover {
-    background-color: #707070;
+    background-color: var(--primary-color); /*Change color*/
     font-size: 1.4rem;
-    text-shadow: 0 0 4px whitesmoke;
+    text-shadow: 0 0 4px var(--text);
   }
 }
 
 .user-data-container {
   width: 500px;
-  border: 2px solid #c5c5c5;
   padding: 30px;
   border-radius: 20px;
-  background-color: #2b2b2b;
+  border: 2px solid var(--accent);
+  background: linear-gradient(200deg, var(--bg), var(--secondary-color));
 }
 
 .profile-data {
@@ -109,6 +132,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 50px;
 }
 
@@ -139,14 +163,14 @@ button {
     gap: 4px;
     span {
       font-size: 0.7rem;
-      color: #c5c5c5;
+      color: var(--text);
     }
   }
 }
 
 .user-icon {
   border-radius: 50%;
-  border: 3px solid #f5f5f5;
+  border: 3px solid var(--accent);
 }
 
 .user-info {
@@ -162,12 +186,10 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 99%;
   gap: 14px;
 }
 
 .post-container {
-  color: white;
   display: flex;
   justify-content: center;
   border-radius: 10px;

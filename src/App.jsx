@@ -81,6 +81,10 @@ export function App () {
 
   return (
     <main>
+      <header>
+        <h1>Stories Viewer</h1>
+        <h2>Watch the stories of any Instagram user anonymously</h2>
+      </header>
       <nav className='navigation-menu'>
         <section className='search-user'>
           <div>
@@ -88,6 +92,7 @@ export function App () {
             <button className='search-button' onClick={searchUserData}><i className='ri-search-line' /></button>
           </div>
         </section>
+        <a href='https://github.com/Llop-Estepari' target='_blank' rel='noreferrer'><i className='ri-github-fill' /></a>
       </nav>
       <ProfileData userData={userData} />
     </main>
